@@ -34,7 +34,8 @@
 		persistencyKey="SmartFilterPKey"
 		assignedFiltersChanged="onFiltersChanged"
         considerSelectionVariants="true"
-        enableBasicSearch="true">
+        enableBasicSearch="true" 
+        width="100%">
 		
         <smartFilterBar:controlConfiguration>
             <smartFilterBar:ControlConfiguration id="_IDdGenCxontrolConfiguration1"

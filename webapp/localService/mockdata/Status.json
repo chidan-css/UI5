@@ -1,0 +1,15 @@
+[
+    {
+        "STA":"AVL",
+        "DESCR":"Available"
+    },
+    {
+        "STA":"DIS",
+        "DESCR":"Discontinued"
+    },
+    {
+        "STA":"OOS",
+        "DESCR":"Discontinued"
+    }
+    
+]

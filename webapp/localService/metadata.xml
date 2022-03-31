@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0"
+	xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx"
+	xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"
+	xmlns:sap="http://www.sap.com/Protocols/SAPData">
+	<edmx:DataServices m:DataServiceVersion="2.0">
+		<Schema Namespace="EPM_REF_APPS_PROD_MAN_SRV"
+			sap:schema-version="1" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+			<EntityType Name="Product">
+				<Key>
+					<PropertyRef Name="ProductId"/>
+				</Key>
+				<Property Name="ProductId" Type="Edm.String"
+					sap:filterable="false"/>
+				<Property Name="Name" Type="Edm.String" MaxLength="30"
+					sap:label="Name" sap:filterable="false"/>
+				<Property Name="Category" Type="Edm.String" sap:label="Category"
+					sap:filterable="true"/>
+				<Property Name="Price" Type="Edm.String" sap:unit="CurrencyCode"
+					MaxLength="3" sap:label="Price" sap:filterable="false"/>
+				<Property Name="CurrencyCode" Type="Edm.String" MaxLength="3" sap:label="Currency" sap:semantics="currency-code" sap:filterable="true"/>
+                <Property Name="Country Key" Type="Edm.String" MaxLength="3" sap:label="Country Key"  sap:filterable="true"/>
+                <Property Name="Markating Authorization Status" Type="Edm.String" MaxLength="3" sap:label="Markating Authorization Status" sap:semantics="currency-code" sap:filterable="true"/>
+                <Property Name="Holder Number" Type="Edm.String" MaxLength="3" sap:label="Holder Number" sap:semantics="currency-code" sap:filterable="true"/>
+                <Property Name="Effective Starte Date" Type="Edm.String" MaxLength="3" sap:label="Effective Start Date" sap:semantics="currency-code" sap:filterable="true"/>
+                <Property Name="Effective End Date" Type="Edm.String" MaxLength="3" sap:label="Effective End Date"  sap:filterable="true"/>
+                <Property Name="Expiring In" Type="Edm.String" MaxLength="3" sap:label="Expiring In"  sap:filterable="true"/>
+                <Property Name="Expiring In Unit" Type="Edm.String" MaxLength="3" sap:label="Expiring In Unit"  sap:filterable="true"/>
+                <Property Name="Record Type" Type="Edm.String" MaxLength="3" sap:label="Record Type"  sap:filterable="true"/>
+                <Property Name="Agency" Type="Edm.String" MaxLength="10" sap:label="Agency/ source system"  sap:filterable="true"/>
+                <Property Name="Interaction purpos" Type="Edm.String" MaxLength="3" sap:label="Interaction Purpous Code"  sap:filterable="true"/>
+                <Property Name="ID" Type="Edm.String" MaxLength="3" sap:label="ID"  sap:filterable="true"/>
+                <Property Name="Agency Version ID" Type="Edm.String" MaxLength="3" sap:label="Agency Version ID"  sap:filterable="true"/>
+                <Property Name="Acceptance Number" Type="Edm.String" MaxLength="3" sap:label="Acceptance Number"  sap:filterable="true"/>
+                <Property Name="Publish Number" Type="Edm.String" MaxLength="3" sap:label="Publish Number"  sap:filterable="true"/>
+                <Property Name="Markating Auth. No" Type="Edm.String" MaxLength="3" sap:label="Markating Auth. No"  sap:filterable="true"/>
+                <Property Name="Authorization Status Text" Type="Edm.String" MaxLength="3" sap:label="Authorization Status Text"  sap:filterable="true"/>
+                <Property Name="Communication Profile Code" Type="Edm.String" MaxLength="3" sap:label="Communication Profile Code"  sap:filterable="true"/>
+                <Property Name="About to Expire" Type="Edm.String" MaxLength="3" sap:label="About to Expire"  sap:filterable="true"/>
+
+
+                <!-- <Property Name="Record ID" Type="Edm.String" MaxLength="3" sap:label="Record ID"  sap:filterable="true"/> -->
+                <!-- <Property Name="Record description" Type="Edm.String" MaxLength="3" sap:label="Record description" sap:semantics="currency-code" sap:filterable="true"/> -->
+                <!-- <Property Name="lifecycle status" Type="Edm.String" MaxLength="3" sap:label="lifecycle status" sap:semantics="currency-code" sap:filterable="true"/> -->
+                <!-- <Property Name="Sub Category" Type="Edm.String" MaxLength="3" sap:label="Sub Category" sap:semantics="currency-code" sap:filterable="true"/>    -->
+                <!-- <Property Name="Authorization status" Type="Edm.String" MaxLength="3" sap:label="Authorization status" sap:semantics="currency-code" sap:filterable="true"/>        -->
+                <!-- <Property Name="Authorization status date" Type="Edm.String" MaxLength="3" sap:label="Authorization status date" sap:semantics="currency-code" sap:filterable="true"/> -->
+                <Property Name="Status" Type="Edm.String" MaxLength="3" sap:label="Status"  sap:filterable="true"/>      
+
+			</EntityType>
+
+			<EntityType Name="Currency">
+				<Key>
+					<PropertyRef Name="CURR"/>
+				</Key>
+				<Property Name="CURR" Type="Edm.String" MaxLength="4"
+					sap:display-format="UpperCase" sap:text="DESCR" sap:label="Currency Code"
+					sap:filterable="false"/>
+				<Property Name="DESCR" Type="Edm.String" MaxLength="25"
+					sap:label="Description"/>
+			</EntityType>
+
+			<EntityType Name="Category">
+				<Key>
+					<PropertyRef Name="CAT"/>
+				</Key>
+				<Property Name="CAT" Type="Edm.String" MaxLength="4"
+					sap:display-format="UpperCase" sap:text="DESCR" sap:label="Category"
+					sap:filterable="false"/>
+				<Property Name="DESCR" Type="Edm.String" MaxLength="25"
+					sap:label="Description"/>
+			</EntityType>
+
+            <EntityType Name="Record ID">
+				<Key>
+					<PropertyRef Name="REC"/>
+				</Key>
+				<Property Name="REC" Type="Edm.String" MaxLength="4"
+					sap:display-format="UpperCase" sap:text="DESCR" sap:label="Record ID"
+					sap:filterable="false"/>
+                    <Property Name="DESCR" Type="Edm.String" MaxLength="25"
+					sap:label="Description"/>
+				
+			</EntityType>
+
+            <EntityType Name="Record Description">
+				<Key>
+					<PropertyRef Name="RED"/>
+				</Key>
+				<Property Name="RED" Type="Edm.String" MaxLength="4"
+					sap:display-format="UpperCase" sap:text="DESCR" sap:label="RED"
+					sap:filterable="false"/>
+				<Property Name="DESCR" Type="Edm.String" MaxLength="25"
+					sap:label="Record Description"/>
+			</EntityType>
+            <EntityType Name="Status">
+				<Key>
+					<PropertyRef Name="STA"/>
+				</Key>
+				<Property Name="STA" Type="Edm.String" MaxLength="4"
+					sap:display-format="UpperCase" sap:text="DESCR" sap:label="Status"
+					sap:filterable="false"/>
+				<Property Name="DESCR" Type="Edm.String" MaxLength="25"
+					sap:label="Description"/>
+			</EntityType>
+
+            <EntityType Name="Country Key">
+				<Key>
+					<PropertyRef Name="CTK"/>
+				</Key>
+				<Property Name="CTK" Type="Edm.String" MaxLength="4"
+					sap:display-format="UpperCase" sap:text="DESCR" sap:label="Status"
+					sap:filterable="false"/>
+				<Property Name="DESCR" Type="Edm.String" MaxLength="25"
+					sap:label="Description"/>
+			</EntityType>
+            <EntityType Name="Holder Number">
+				<Key>
+					<PropertyRef Name="HDN"/>
+				</Key>
+				<Property Name="HDN" Type="Edm.String" MaxLength="4"
+					sap:display-format="UpperCase" sap:text="DESCR" sap:label="Status"
+					sap:filterable="false"/>
+				<Property Name="DESCR" Type="Edm.String" MaxLength="25"
+					sap:label="Description"/>
+			</EntityType>
+            
+
+
+
+
+			<EntityContainer m:IsDefaultEntityContainer="true"
+				sap:supported-formats="atom json">
+				<EntitySet Name="Products" EntityType="EPM_REF_APPS_PROD_MAN_SRV.Product"/>
+				<EntitySet Name="Currency" EntityType="EPM_REF_APPS_PROD_MAN_SRV.Currency"/>
+				<EntitySet Name="Category" EntityType="EPM_REF_APPS_PROD_MAN_SRV.Category"/>
+                <EntitySet Name="Record ID" EntityType="EPM_REF_APPS_PROD_MAN_SRV.Record ID"/>
+                <EntitySet Name="Record Description" EntityType="EPM_REF_APPS_PROD_MAN_SRV.Record Description"/>
+                <EntitySet Name="Status" EntityType="EPM_REF_APPS_PROD_MAN_SRV.Status"/>
+                <EntitySet Name="Country Key" EntityType="EPM_REF_APPS_PROD_MAN_SRV.Country Key"/>
+                <EntitySet Name="Holder Number" EntityType="EPM_REF_APPS_PROD_MAN_SRV.Holder Number"/>
+                <!-- <EntitySet Name="Expiring In" EntityType="EPM_REF_APPS_PROD_MAN_SRV.Country Key"/> -->
+                
+
+                <!-- <EntitySet Name="lifecycle status" EntityType="EPM_REF_APPS_PROD_MAN_SRV.lifecycle status"/>
+                <EntitySet Name="Sub Category" EntityType="EPM_REF_APPS_PROD_MAN_SRV.Sub Category"/>
+                <EntitySet Name="Authorization status" EntityType="EPM_REF_APPS_PROD_MAN_SRV.Authorization status"/>
+                <EntitySet Name="Authorization status date" EntityType="EPM_REF_APPS_PROD_MAN_SRV.Authorization status date"/> -->
+
+			</EntityContainer>
+			<Annotations Target="EPM_REF_APPS_PROD_MAN_SRV.Product/CurrencyCode"
+				xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="com.sap.vocabularies.Common.v1.ValueList">
+					<Record>
+						<PropertyValue Property="Label" String="Currency"/>
+						<PropertyValue Property="CollectionPath" String="Currency"/>
+						<PropertyValue Property="SearchSupported" Bool="true"/>
+						<PropertyValue Property="Parameters">
+							<Collection>
+								<Record Type="com.sap.vocabularies.Common.v1.ValueListParameterOut">
+									<PropertyValue Property="LocalDataProperty"
+										PropertyPath="CurrencyCode"/>
+									<PropertyValue Property="ValueListProperty"
+										String="CURR"/>
+								</Record>
+								<Record
+									Type="com.sap.vocabularies.Common.v1.ValueListParameterDisplayOnly">
+									<PropertyValue Property="ValueListProperty"
+										String="DESCR"/>
+								</Record>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+			</Annotations>
+			<Annotations Target="EPM_REF_APPS_PROD_MAN_SRV.Product/Category"
+				xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="com.sap.vocabularies.Common.v1.ValueList">
+					<Record>
+						<PropertyValue Property="Label" String="Category"/>
+						<PropertyValue Property="CollectionPath" String="Category"/>
+						<PropertyValue Property="SearchSupported" Bool="true"/>
+						<PropertyValue Property="Parameters">
+							<Collection>
+								<Record Type="com.sap.vocabularies.Common.v1.ValueListParameterOut">
+									<PropertyValue Property="LocalDataProperty"
+										PropertyPath="Category"/>
+									<PropertyValue Property="ValueListProperty"
+										String="DESCR"/>
+								</Record>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+			</Annotations>
+            <Annotations Target="EPM_REF_APPS_PROD_MAN_SRV.Product/Record ID"
+				xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="com.sap.vocabularies.Common.v1.ValueList">
+					<Record>
+						<PropertyValue Property="Label" String="Record ID"/>
+						<PropertyValue Property="CollectionPath" String="Record ID"/>
+						<PropertyValue Property="SearchSupported" Bool="true"/>
+						<PropertyValue Property="Parameters">
+							<Collection>
+								<Record Type="com.sap.vocabularies.Common.v1.ValueListParameterOut">
+									<PropertyValue Property="LocalDataProperty"
+										PropertyPath="Record ID"/>
+									<PropertyValue Property="ValueListProperty"
+										String="DESCR"/>
+								</Record>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+			</Annotations>
+
+            <Annotations Target="EPM_REF_APPS_PROD_MAN_SRV.Product/Status"
+				xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="com.sap.vocabularies.Common.v1.ValueList">
+					<Record>
+						<PropertyValue Property="Label" String="Status"/>
+						<PropertyValue Property="CollectionPath" String="Status"/>
+						<PropertyValue Property="SearchSupported" Bool="true"/>
+						<PropertyValue Property="Parameters">
+							<Collection>
+								<Record Type="com.sap.vocabularies.Common.v1.ValueListParameterOut">
+									<PropertyValue Property="LocalDataProperty"
+										PropertyPath="Status"/>
+									<PropertyValue Property="ValueListProperty"
+										String="DESCR"/>
+								</Record>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+			</Annotations>
+
+            <Annotations Target="EPM_REF_APPS_PROD_MAN_SRV.Product/Country Key"
+				xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="com.sap.vocabularies.Common.v1.ValueList">
+					<Record>
+						<PropertyValue Property="Label" String="Country Key"/>
+						<PropertyValue Property="CollectionPath" String="Country Key"/>
+						<PropertyValue Property="SearchSupported" Bool="true"/>
+						<PropertyValue Property="Parameters">
+							<Collection>
+								<Record Type="com.sap.vocabularies.Common.v1.ValueListParameterOut">
+									<PropertyValue Property="LocalDataProperty"
+										PropertyPath="Country Key"/>
+									<PropertyValue Property="ValueListProperty"
+										String="DESCR"/>
+								</Record>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+			</Annotations>
+            <Annotations Target="EPM_REF_APPS_PROD_MAN_SRV.Product/Holder Number"
+				xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="com.sap.vocabularies.Common.v1.ValueList">
+					<Record>
+						<PropertyValue Property="Label" String="Holder Number"/>
+						<PropertyValue Property="CollectionPath" String="Holder Number"/>
+						<PropertyValue Property="SearchSupported" Bool="true"/>
+						<PropertyValue Property="Parameters">
+							<Collection>
+								<Record Type="com.sap.vocabularies.Common.v1.ValueListParameterOut">
+									<PropertyValue Property="LocalDataProperty"
+										PropertyPath="Holder Number"/>
+									<PropertyValue Property="ValueListProperty"
+										String="DESCR"/>
+								</Record>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+			</Annotations>
+
+			<Annotations Target="EPM_REF_APPS_PROD_MAN_SRV.Product"
+				xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="com.sap.vocabularies.UI.v1.LineItem">
+					<Collection>
+						<!-- <Record Type="com.sap.vocabularies.UI.v1.DataField">
+							<PropertyValue Property="Value" Path="ProductId"/>
+						</Record>
+						<Record Type="com.sap.vocabularies.UI.v1.DataField">
+							<PropertyValue Property="Value" Path="Price"/>
+						</Record>
+						<Record Type="com.sap.vocabularies.UI.v1.DataField">
+							<PropertyValue Property="Value" Path="Name"/>
+						</Record>
+						<Record Type="com.sap.vocabularies.UI.v1.DataField">
+							<PropertyValue Property="Value" Path="Category"/>
+						</Record> -->
+                        <Record Type="com.sap.vocabularies.UI.v1.DataField">
+							<PropertyValue Property="Value" Path="Record Type"/>
+						</Record>
+                        <Record Type="com.sap.vocabularies.UI.v1.DataField">
+							<PropertyValue Property="Value" Path="Markating Auth. No"/>
+						</Record>
+                        <Record Type="com.sap.vocabularies.UI.v1.DataField">
+							<PropertyValue Property="Value" Path="Country Key"/>
+						</Record>
+                        <Record Type="com.sap.vocabularies.UI.v1.DataField">
+							<PropertyValue Property="Value" Path="Markating Authorization Status"/>
+						</Record>
+                        <Record Type="com.sap.vocabularies.UI.v1.DataField">
+							<PropertyValue Property="Value" Path="Authorization Status Text"/>
+						</Record>
+                        <Record Type="com.sap.vocabularies.UI.v1.DataField">
+							<PropertyValue Property="Value" Path="Holder Number"/>
+						</Record>
+                        <Record Type="com.sap.vocabularies.UI.v1.DataField">
+							<PropertyValue Property="Value" Path="Effective Starte Date"/>
+						</Record>
+                        <Record Type="com.sap.vocabularies.UI.v1.DataField">
+							<PropertyValue Property="Value" Path="Effective End Date"/>
+						</Record>
+                        <Record Type="com.sap.vocabularies.UI.v1.DataField">
+							<PropertyValue Property="Value" Path="Expiring In"/>
+						</Record>
+                        <Record Type="com.sap.vocabularies.UI.v1.DataField">
+							<PropertyValue Property="Value" Path="Expiring In Unit"/>
+						</Record>
+                        <Record Type="com.sap.vocabularies.UI.v1.DataField">
+							<PropertyValue Property="Value" Path="Communication Profile Code"/>
+						</Record>
+                        <Record Type="com.sap.vocabularies.UI.v1.DataField">
+							<PropertyValue Property="Value" Path="About to Expire"/>
+						</Record>
+                        <Record Type="com.sap.vocabularies.UI.v1.DataField">
+							<PropertyValue Property="Value" Path="ID"/>
+						</Record>
+                         <Record Type="com.sap.vocabularies.UI.v1.DataField">
+							<PropertyValue Property="Value" Path="Agency Version ID"/>
+						</Record>
+                        <Record Type="com.sap.vocabularies.UI.v1.DataField">
+							<PropertyValue Property="Value" Path="Acceptance Number"/>
+						</Record>
+                         
+                         <Record Type="com.sap.vocabularies.UI.v1.DataField">
+							<PropertyValue Property="Value" Path="Agency"/>
+						</Record>
+                        <Record Type="com.sap.vocabularies.UI.v1.DataField">
+							<PropertyValue Property="Value" Path="Interaction purpos"/>
+						</Record>
+                        <Record Type="com.sap.vocabularies.UI.v1.DataField">
+							<PropertyValue Property="Value" Path="Publish Number"/>
+						</Record>
+
+                        
+                        
+                       
+                        
+                         
+                         
+                        
+                        
+
+					</Collection>
+				</Annotation>
+			</Annotations>
+		</Schema>
+	</edmx:DataServices>
+</edmx:Edmx>

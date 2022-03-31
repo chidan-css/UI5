@@ -1,0 +1,40 @@
+[
+    {
+        "Record type":"Source Change Request",
+        "Markating Auth. No":"",
+        "Country":"Australia",
+        "Markating Authorization Status":"",
+        "Authorization Status Text":"",
+        "Holder Number":"",
+        "Effective Starte Date":"",
+        "Effective End Date":"",
+        "Expiring In":"0",
+        "Communication Profile Code":"ZCOR",
+        "About to Expire":"No",
+        "ID":"",
+        "Agency Version ID":"",
+        "Acceptance Number":"",
+        "Agency/Source System":"ERP Source System(2)",
+        "Interaction purpos":"All Purposes",
+        "Publish Number":""
+    },
+    {
+        "Record type":"Source Change Request",
+        "Markating Auth. No":"123",
+        "Country":"Albania",
+        "Markating Authorization Status":"",
+        "Authorization Status Text":"",
+        "Holder Number":"",
+        "Effective Starte Date":"22.06.2021",
+        "Effective End Date":"18.06.2031",
+        "Expiring In":"0",
+        "Communication Profile Code":"ZCOR",
+        "About to Expire":"No",
+        "ID":"",
+        "Agency Version ID":"",
+        "Acceptance Number":"",
+        "Agency/Source System":"ERP Source System",
+        "Interaction purpos":"All Purposes",
+        "Publish Number":""
+    }
+]

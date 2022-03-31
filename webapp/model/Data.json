@@ -1,0 +1,25 @@
+{
+	"regionProperties" :
+		[
+		    { "code": "EU", "legend": "Europe",         "color": "rgba(184,225,245,1.0)", "tooltip":"Europe\r\n\r\nPopulation: 743 Mio" },
+		    { "code": "NA", "legend": "North America",  "color": "rgba(5,71,102,1.0)"  },
+		    { "code": "AS", "legend": "Asia",        "color": "rgba(92,186,229,1.0)"  }
+		],
+
+	"Spots" :
+		[
+
+            {
+                "pos": "130;-28;0",
+                "tooltip": "Australia",
+                "type": "Success",
+                "text": "3232"
+            },
+            {
+                "pos": "20.1024902;40.7040592;0",
+                "tooltip": "Albania",
+                "type": "Error",
+                "text": "3443"
+            }
+		]
+}

@@ -17,12 +17,7 @@
 	</HBox> -->
     
    
-    <FlexBox id="_IDGenFlexBox1"
-				
-
-                
-				alignItems="Start"
-				justifyContent="End">
+    <FlexBox id="_IDGenFlexBox1" alignItems="Start"	justifyContent="End">
 				<Button id="_IDGenButton4"  icon="sap-icon://action"  />
 				
 			</FlexBox>
@@ -110,13 +105,7 @@
 				visibleInAdvancedArea="true"
 				preventInitialDataFetchInValueHelpDialog="false">
 			</smartFilterBar:ControlConfiguration>
-           
-            
-              
-
-            
-
-
+         
 		</smartFilterBar:controlConfiguration>
         
         <smartFilterBar:controlConfiguration>
@@ -129,12 +118,13 @@
 	</smartFilterBar:SmartFilterBar>
      <Toolbar id="_IDGenToolbar1">
         <ToolbarSpacer id="_IDGenToolbarSpaxcer3" ></ToolbarSpacer>
+        
         <SegmentedButton id="_IDGenSegmentedButton1" selectedKey="kids">
 					<items>
 						<SegmentedButtonItem id="_IDGenSegmentedButtonItem1"   icon="sap-icon://geographic-bubble-chart" press="onPress" />
 						<SegmentedButtonItem id="_IDGenSegmentedButtonItem2"  icon="sap-icon://table-view" press="onClick"  />		
 					</items>
-				</SegmentedButton>
+		</SegmentedButton>
         
 			<!-- <ToggleButton id="_IDGenToggleButton1" icon="sap-icon://geographic-bubble-chart" press="onPress" />
             <ToggleButton id="_IDGenToggleButton21" icon="sap-icon://table-view" press="onPress" /> -->
@@ -172,7 +162,7 @@
         	<!-- <l:flexContent> -->
 			<vbm:AnalyticMap id="vbi" width="100%" xmlns:l="sap.ui.layout" height="100%"
 				initialPosition="0;10;0" regionClick="onRegionClick"
-				regionContextMenu="onRegionContextMenu">
+				regionContextMenu="onRegionContextMenu"  >
                 	<!-- <vbm:resources>
 					<vbm:Resource id="_IDGenResource1" name="green.png"
 						src="../image/green.png">

@@ -49,7 +49,7 @@ sap.ui.define([
                
             maps.addAggregation("vos",spt,false );
         // maps.addAggregation(Spotss);
-        debugger;
+        // debugger;
         },
         mapLegend:function()
         {
@@ -77,16 +77,25 @@ sap.ui.define([
             maps.setLegend(legend);
         },
 
+        // onRegionClick:function(){
+        //     debugger;
+        //         // var mapSpot=this.getView().byId("vbi");
+        //         var entitySet= new JSONModel();
+        //         entitySet.loadData("../mockdata/Products.json");
+        //         this.getView().setModel(entitySet);
+
+        // },
+
         
         onPress: function(oEvent){
-            debugger;
+            // debugger;
             // this.getView().byID("vbi");
             this.getView().byId("smartTable_ResponsiveTable").setVisible(false);
             this.getView().byId("vbi").setVisible(true);
             // this.getView().byId("_IDGenTooldbar1").setVisible(false);
         },
         onClick: function(oEvent){
-            debugger;
+            // debugger;
             // this.getView().byID("vbi");
             this.getView().byId("vbi").setVisible(false);
             this.getView().byId("smartTable_ResponsiveTable").setVisible(true);

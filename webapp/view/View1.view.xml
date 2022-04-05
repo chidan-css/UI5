@@ -150,6 +150,8 @@
 		persistencyKey="SmartTablePKey"
         visible="false"
 	>
+
+    
 	</smartTable:SmartTable>
 
     <FlexBox id="_IDGenFlexBox2" alignItems="Start" justifyContent="End">

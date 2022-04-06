@@ -30,6 +30,8 @@
 		assignedFiltersChanged="onFiltersChanged"
         considerSelectionVariants="true"
         enableBasicSearch="true" 
+      
+      
        >
 		
         <smartFilterBar:controlConfiguration>
@@ -93,6 +95,7 @@
 				key="Agency Version ID"
 				visibleInAdvancedArea="true"
 				preventInitialDataFetchInValueHelpDialog="false">
+
 			</smartFilterBar:ControlConfiguration>
              <smartFilterBar:ControlConfiguration id="_IDddtdGedgendrrCdxodndtrolConfiguration1"
 				key="Acceptance Number"

@@ -1,3 +1,4 @@
+<!-- feature -->
 <mvc:View
 	controllerName="data.meta.controller.View1"
 	xmlns="sap.m"
